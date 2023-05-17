@@ -1,0 +1,26 @@
+server:
+  port: 8082
+rabbitmq:
+  host: localhost
+  virtualhost: /
+  port: 15672
+  username: guest
+  password: guest
+  exchange: rabbitmq.exchange
+  queue: rabbitmq.queue
+  routingkey: rabbitmq.routingkey
+  reply:
+    timeout: 60000
+  concurrent:
+    consumers: 1
+  max:
+    concurrent:
+      consumers: 1
+      
+mongodb: 
+  host: localhost
+  port: 27017
+  database: test-rabbit
+  username: test
+  password: test
+  authentication-database: admin
